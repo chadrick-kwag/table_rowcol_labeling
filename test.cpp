@@ -2,19 +2,22 @@
 #include "ui_test.h"
 
 test::test(QWidget *parent) :
-    QWidget(parent),
-    imageLabel(new QLabel)
-//    ui(new Ui::test)
+    QWidget(parent)
 {
-//    ui->setupUi(this);
+
+
+    setMouseTracking(true);
+
+    imageLabel = new imagelabel(parent);
 
 
     imageLabel->setBackgroundRole(QPalette::Base);
     imageLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
     imageLabel->setScaledContents(true);
 
+
     QGridLayout layout(this);
-//    layout->addWidget(imageLabel);
+
     layout.addWidget(imageLabel);
 
 
@@ -53,14 +56,21 @@ void test::open(){
     }
 
     imageLabel->setPixmap(QPixmap::fromImage(readimage));
+    imageLabel->saved_pixmap = QPixmap::fromImage(readimage);
 
-
-
-
-
-
-
+    if(imageLabel->pixmap()!=0){
+        qDebug() << "imageLabel pixmap not null";
+    }
+    else{
+        qDebug() << "imageLabel pixmap is null";
+    }
 
 }
+
+
+
+
+
+
 
 

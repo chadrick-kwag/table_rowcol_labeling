@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        test.cpp
+        test.cpp \
+    imagelabel.cpp
 
 HEADERS += \
-        test.h
+        test.h \
+    imagelabel.h
 
 FORMS += \
         test.ui
