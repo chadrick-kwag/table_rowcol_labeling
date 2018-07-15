@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         test.cpp \
-    imagelabel.cpp
+    imagelabel.cpp \
+    newtypelabel1.cpp
 
 HEADERS += \
         test.h \
-    imagelabel.h
+    imagelabel.h \
+    newtypelabel1.h
 
 FORMS += \
         test.ui

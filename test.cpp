@@ -8,12 +8,15 @@ test::test(QWidget *parent) :
 
     setMouseTracking(true);
 
-    imageLabel = new imagelabel(parent);
+    imageLabel = new NewTypeLabel1(parent);
+
+
 
 
     imageLabel->setBackgroundRole(QPalette::Base);
     imageLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
-    imageLabel->setScaledContents(true);
+
+//    imageLabel->setScaledContents(true);
 
 
     QGridLayout layout(this);
@@ -56,7 +59,8 @@ void test::open(){
     }
 
     imageLabel->setPixmap(QPixmap::fromImage(readimage));
-    imageLabel->saved_pixmap = QPixmap::fromImage(readimage);
+//    imageLabel->saved_pixmap = QPixmap::fromImage(readimage);
+
 
     if(imageLabel->pixmap()!=0){
         qDebug() << "imageLabel pixmap not null";

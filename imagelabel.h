@@ -15,6 +15,7 @@ public:
     void paintEvent(QPaintEvent *);
     ~imagelabel();
     QPixmap saved_pixmap;
+    void setPixmap(const QPixmap &);
 
 private:
     QPointF startpoint, endpoint;

@@ -9,14 +9,10 @@
 #include <QGridLayout>
 #include <QMouseEvent>
 
-#include "imagelabel.h"
+//#include "imagelabel.h"
+#include "newtypelabel1.h"
 
 
-class QLabel;
-
-//namespace Ui {
-//class test;
-//}
 
 class test : public QWidget
 {
@@ -31,12 +27,13 @@ public:
 private:
 
 
-    imagelabel *imageLabel;
+    NewTypeLabel1 *imageLabel;
     QImage image;
     bool loadimage();
     void open();
     bool mousepressed;
     QPointF startpoint, endpoint;
+
 
 
 

@@ -3,14 +3,7 @@
 imagelabel::imagelabel(QWidget *parent):
     QLabel(parent)
 {
-    startpoint.setX(0.0);
-    startpoint.setY(0.0);
-
-    endpoint.setX(0.0);
-    endpoint.setY(0.0);
-
     setScaledContents(true);
-
 }
 
 imagelabel::~imagelabel(){
@@ -44,5 +37,11 @@ void imagelabel::paintEvent(QPaintEvent *ev){
 //    painter.setPen(pen);
 
 //    painter.drawLine(startpoint, endpoint);
+}
+
+
+void imagelabel::setPixmap(const QPixmap &pixmap){
+    QLabel::setPixmap(pixmap);
+    qDebug() << "imagelabel setPixmap called";
 }
 
